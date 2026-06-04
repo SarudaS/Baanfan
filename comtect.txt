@@ -1,0 +1,156 @@
+This is project built for Bannfan barkery .
+
+element for the project have all menu .(all i can)
+price of menu .(cuz front shop don't have any tage price)
+and the way for contact .
+
+by the way i want to pratiect my skill .
+
+import React from 'react'
+
+const Hero = () => {
+  return (
+    <div><section className="relative w-full h-[860px] overflow-hidden bg-slate-100">
+      {/* 1. ส่วนรูปภาพพื้นหลัง (ขวาสุดยาวมาถึงกลางหรือเต็มจอ) */}
+      <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 bg-gray-300">
+             {/* ตรงนี้คือที่วางรูปภาพจริง โดยใช้ object-cover เพื่อให้รูปยาวติดขอบ */}
+             <div className="w-full h-full flex items-center justify-center text-slate-400 italic">
+               Full Picture Background
+             </div>
+        </div>
+      </div>
+
+      {/* 2. ส่วนของ Gradient Shadow (ฝั่งซ้าย) */}
+      {/* เทคนิคนี้จะทำให้ฝั่งซ้ายเข้มขึ้นเล็กน้อยเพื่อให้ Text สีขาวหรือสีอ่อนอ่านง่ายขึ้น */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
+
+      {/* 3. ส่วนเนื้อหา (Left Content) */}
+      <div className="relative z-10 h-full max-w-7xl mx-auto px-10 flex flex-col justify-center text-white">
+        <div className="max-w-xl space-y-4">
+          <p className="tracking-[0.3em] uppercase text-sm opacity-90">
+            bannfan
+          </p>
+          <h1 className="text-5xl md:text-6xl font-serif tracking-tight leading-tight">
+            Welcome to <br /> Our Bakery
+          </h1>
+          <p className="text-lg tracking-[0.16em] font-light">
+            Crafting high-quality cakes with passion
+          </p>
+        
+        
+        </div>
+      </div>
+    </section></div>
+  )
+}
+
+export default Hero;
+
+import React from 'react'
+
+const Hero = () => {
+  return (
+    // เปลี่ยนจาก bg-gray-500 → สี pastel ครีม
+    // เปลี่ยนจาก h-[860px] fix → min-h-screen ยืดหยุ่นกว่า
+    // grid-cols-1 มือถือ / grid-cols-2 desktop
+    <section className='
+      w-full min-h-screen
+      bg-[#f5f0e8]
+      grid grid-cols-1 md:grid-cols-2
+      items-center
+      px-8 md:px-16
+      py-16 md:py-0
+      gap-10
+    '>
+
+      {/* ===== LEFT — text ===== */}
+      <div className='flex flex-col gap-5'>
+
+        {/* badge เล็กๆ บนสุด */}
+        <span className='
+          text-xs tracking-[0.2em] uppercase
+          text-[#a0856a]
+          bg-[#ede5d8]
+          px-4 py-1.5 rounded-full
+          w-fit
+        '>
+          Handcrafted with love 🎂
+        </span>
+
+        {/* หัวข้อหลัก */}
+        {/* เปลี่ยนสีจาก default → น้ำตาลเข้ม */}
+        <h1 className='
+          text-4xl md:text-6xl
+          font-bold
+          tracking-tight leading-tight
+          text-[#3a2e28]
+        '>
+          Welcome to<br />
+          <span className='text-[#a0856a]'>BAAN FAN</span>
+        </h1>
+
+        {/* คำอธิบาย */}
+        {/* เพิ่ม paragraph อธิบายร้าน */}
+        <p className='
+          text-sm md:text-base
+          text-[#7a6a5a]
+          leading-relaxed
+          max-w-sm
+        '>
+          ทุกชิ้นทำด้วยมือและหัวใจ เพื่อทุกวันพิเศษของคุณ
+        </p>
+
+        {/* tagline เดิม — ย้ายมาไว้ตรงนี้ */}
+        <p className='
+          tracking-[0.25em] uppercase
+          text-xs
+          text-[#a0856a]
+          opacity-70
+        '>
+          Don't forget your dreams :)
+        </p>
+
+        {/* ปุ่ม */}
+        {/* เพิ่มปุ่ม 2 อัน */}
+        <div className='flex gap-3 mt-2 flex-wrap'>
+          <button className='
+            bg-[#3a2e28] text-[#f5f0e8]
+            text-sm px-6 py-3 rounded-full
+            hover:bg-[#a0856a] transition-colors duration-300
+          '>
+            สั่งเค้กเลย
+          </button>
+          <button className='
+            border border-[#3a2e28] text-[#3a2e28]
+            text-sm px-6 py-3 rounded-full
+            hover:bg-[#ede5d8] transition-colors duration-300
+          '>
+            ดูเมนู
+          </button>
+        </div>
+
+      </div>
+
+      {/* ===== RIGHT — รูป ===== */}
+      {/* มือถือ → รูปขนาดเล็กลง / desktop → สูงกว่า */}
+      <div className='flex items-center justify-center'>
+        <div className='
+          rounded-3xl overflow-hidden
+          w-full max-w-sm
+          h-72 md:h-[520px]
+          shadow-md
+        '>
+          <img
+            src="/cake/all-cake-hero-2.jpg"
+            alt="baan fan cake"
+            className='w-full h-full object-cover'
+          />
+        </div>
+      </div>
+
+    </section>
+  )
+}
+
+export default Hero
