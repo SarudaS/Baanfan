@@ -1,4 +1,4 @@
-import React from 'react'
+
 import AboutHero  from '../components/components_aboutpage/AboutHero.tsx'
 const AboutPage = () => {
   return (

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ContactHero from '../components/components_contactpage/ContactHero.tsx'
 
 const ContactPage = () => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import MenuHero from '../components/components_menu/MenuHero.tsx'
 function Menu() {
   return (
